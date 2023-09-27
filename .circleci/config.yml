@@ -1,4 +1,4 @@
-
+# my config
 version: 2.1
 orbs:
   node: circleci/node@3.0.0
@@ -7,7 +7,7 @@ orbs:
 jobs:
   build-and-push:
     environment:
-      DOCKER_IMAGE: nhtua/react-docker
+      DOCKER_IMAGE: nhdinh/react-docker
       DOCKER_TAG: latest
     executor: docker/docker
     steps:
@@ -46,6 +46,7 @@ workflows:
             branches:
               only:
                 - master
+                - main
       # uncomment the 3 following lines to enable deploying
       # - deploy:
       #     requires:
